@@ -2,6 +2,9 @@ package getter_setters;
 
 import java.util.Arrays;
 
+/**
+ * Represents a person with their personal details and seat number.
+ */
 public class Person {
     private String name;
     private String nationality;
@@ -9,6 +12,14 @@ public class Person {
     private String[] passport;
     private int seatNumber;
 
+    /**
+     * Constructs a new Person object with the given attributes.
+     *
+     * @param name        The name of the person
+     * @param nationality The nationality of the person
+     * @param dateOfBirth The date of birth of the person
+     * @param seatNumber  The seat number of the person
+     */
     public Person(String name, String nationality, String dateOfBirth, int seatNumber) {
         // set fields equal to parameters here.
         this.name = name;
@@ -57,6 +68,16 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        /**
+         * Creates a new Person object with the given attributes.
+         *
+         * @param name        The name of the person.
+         * @param nationality The nationality of the person.
+         * @param dateOfBirth The date of birth of the person in the format
+         *                    "dd-mm-yyyy".
+         * @param id          The ID of the person.
+         * @return A new Person object with the specified attributes.
+         */
         Person person = new Person("rohan", "Indian", "01-01-2002", 100);
 
         // Print details using getters

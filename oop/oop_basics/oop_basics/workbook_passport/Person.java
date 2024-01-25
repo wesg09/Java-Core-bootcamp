@@ -5,6 +5,15 @@ public class Person {
     private String dateOfBirth;
     private int seatNumber;
 
+    /**
+     * Constructs a new Person object with the specified name, nationality, date of
+     * birth, and seat number.
+     *
+     * @param name        The name of the person
+     * @param nationality The nationality of the person
+     * @param dateOfBirth The date of birth of the person
+     * @param seatNumber  The seat number of the person
+     */
     public Person(String name, String nationality, String dateOfBirth, int seatNumber) {
         this.name = name;
         this.nationality = nationality;
@@ -12,6 +21,12 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
+    /**
+     * Creates a new Person object by copying the attributes from the given source
+     * Person object.
+     *
+     * @param source The Person object to copy the attributes from.
+     */
     public Person(Person source) {
         this.name = source.name;
         this.nationality = source.nationality;
@@ -62,6 +77,20 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        /**
+         * Creates a new Person object with the given name, nationality, date of birth,
+         * and number of previous passports.
+         * Checks if the person's passport application is approved. If approved, prints
+         * a congratulatory message and allows the person to choose a seat.
+         * If not approved, prints a message indicating that the application cannot be
+         * processed.
+         *
+         * @param name                      The name of the person
+         * @param nationality               The nationality of the person
+         * @param dateOfBirth               The date of birth of the person
+         * @param numberOfPreviousPassports The number of previous passports the person
+         *                                  has
+         */
         Person person = new Person("Rayan Slim", "Canadian", "01/01/1111", 5);
 
         if (person.applypassport()) {
