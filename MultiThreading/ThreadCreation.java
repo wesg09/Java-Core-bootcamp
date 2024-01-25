@@ -23,7 +23,7 @@ public class ThreadCreation {
      * @param args The command line arguments passed to the program
      */
     public static void main(String[] args) {
-        Thread newThread = new Thread(new NewThread());
+        Thread newThread = new Thread(new NewThread(), "NewThread");
         newThread.start();
         count();
     }
@@ -33,7 +33,7 @@ public class ThreadCreation {
      */
     public static void count() {
         for (int i = 0; i < 20; i++) {
-            System.out.println(i);
+            System.out.println(Thread.currentThread().getName() + ": " + i);
         }
     }
 }
